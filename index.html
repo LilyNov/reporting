@@ -15,17 +15,148 @@
         <a href="index.html">
             <img src="./img/logo.png" alt="logo">
         </a>
-        <nav>
-            <span></span><a href="#">Summary</a>
+        <nav class="navigation">
+            <span></span><a class="navigation__link" href="#">Summary</a>
+            <span></span><a class="navigation__link" href="#">Hours</a>
+            <span></span><a class="navigation__link" href="#">Projects</a>
+            <span></span><a class="navigation__link" href="#">Time reports</a>
+            <span></span><a class="navigation__link" href="#">Confirmation</a>
+            <span></span><a class="navigation__link" href="#">Mailer</a>
+            <span></span><a class="navigation__link" href="#">Compare</a>
         </nav>
+        <img src="./img/icons/avatar.png" alt="avatar">
     </header>
     <main>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
+        <section class="select">
+            <div class="container">
+                <select class="select__dev">
+                    <option>Jenny Wilson</option>
+                    <option>Wilson Jenny</option> 
+                </select>
+                <select class="select__status">
+                    <option>All Statuses</option>
+                    <option>Status 1</option> 
+                </select>
+                <label class="select__efficiency">
+                    <input class="select__checkbox" type="checkbox">
+                    Show Efficiency
+                </label>
+                <button class="select__apply">Apply</button>
+                <button class="select__filters">Reset Filters</button>
+            </div>
+        </section>
+        <section class="project-information">
+            <div class="container">
+                <h3>project information</h3>
+                <div class="information">
+                    <p>Project name</p>
+                    <p>Science &amp; Information Platform</p>
+                </div>
+                <div class="information">
+                    <p class="information__text--purple">Team lead</p>
+                    <p>Ralph Edwards</p>
+                </div>
+                <div class="information">
+                    <p class="information__text--purple">Created</p>
+                    <p>25/06/2019</p>
+                </div>
+                <div class="information">
+                    <p class="information__text--purple">Finished</p>
+                    <p>30/06/2020</p>
+                </div>
+                <div class="information">
+                    <p class="information__text--purple">Categories</p>
+                    <p>CMS Production</p>
+                </div>
+                <div class="information">
+                    <p class="information__text--purple">CMS Production</p>
+                    <img src="./img/icons/dollar-sign.png" alt="dollar">
+                </div>
+                <div class="information">
+                    <p class="information__text--purple">Label</p>
+                    <p>Hourly</p>
+                </div>
+                <div class="information">
+                    <p class="information__text--purple">Tag</p>
+                    <p>Page Mockup</p>
+                </div>
+                <div class="information">
+                    <p class="information__text--purple">Status</p>
+                    <p class="information__text--red">Non Completed</p>
+                </div>
+                <div class="information">
+                    <p class="information__text--purple">Team</p>
+                    <p>Jane Cooper, Wade Warren, Esther Howard, Cameron Williamson, 
+                        Brooklyn Simmons, Leslie Alexander, Jenny Wilson, Gur Hawkins, 
+                        Robert Fox, Jacob Jones, Kristin Watson, Cody Fisher, Savannah Nguen, 
+                        Bessie Cooper, Albert Flores, Ralph Edwards, Dianne Russel, Devon Lane, 
+                        Marvin McKinney, Jerome Bell, Courtney Henry, Theresa Webb, Kathrin Murphu, 
+                        Eleonora Pena, Floud Miles, Darrell Steward
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="project-time">
+            <div class="container">
+                <h3>Project Time</h3>
+                <div class="block">
+                    <h4>Total time (Hours)</h4>
+                    <div class="block__main">
+                        <p>Changes <span>2067.26h</span></p>
+                    </div>
+                    <div class="block__main">
+                        <p>Origin <span>1660.55h</span></p>
+                        <div class="block__secondary">
+                            <p>Programming <span>2345.56h</span></p>
+                            <p>Markup <span>27.18h</span></p>
+                            <p>Graphic Design <span>34h</span></p>
+                            <p>Estimation <span>678h</span></p>
+                            <p>Investigation <span>80.83h</span></p>
+                            <p>Bug Fixing <span>76h</span></p>
+                            <p>Quality Assurance <span>6h</span></p>
+                            <p>Meetings <span>5h</span></p>
+                            <p>Other <span>8256.08h</span></p>
+                        </div>
+                    </div>
+                    <div class="block__main">
+                        <p>Sum <span>15236.48h</span></p>
+                    </div>
+                </div>
+                <div class="block">
+                    <div>
+                        <h4>Time (Hours) by Current Month (Sep)</h4>
+                        <div class="block__main">
+                            <p>Changes <span>0h</span></p>
+                        </div>
+                        <div class="block__main">
+                            <p>Origin <span>2067.26h</span></p>
+                            <div class="block__secondary">
+                                <p>Programming <span>1660.55h</span></p>
+                            </div>
+                        </div>
+                        <div class="block__main">
+                            <p>Sum <span>15236.48h</span></p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Estimations (Hours)</h4>
+                        <div class="block__main">
+                            <p>Changes <span>0h</span></p>
+                        </div>
+                        <div class="block__main">
+                            <p>Origin <span>2067.26h</span></p>
+                        </div>
+                        <div class="block__main">
+                            <p>Sum <span>15236.48h</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="efficiency"></section>
+        <section class="table"></section>
+        <section class="pagination"></section>
     </main>
-    <footer></footer>
+    <footer class="footer"></footer>
 </body>
 </html>
