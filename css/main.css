@@ -1,1 +1,125 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: #171e28;
+  color: #b6b4c6;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+
+.header__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-bottom: 1px solid #3D444E;
+}
+
+.header__link {
+  padding: 12px 0 15px 0;
+}
+
+.navigation__avatar {
+  display: none;
+  padding: 12px 0 15px 14px;
+  border-left: 1px solid #3D444E;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation__avatar {
+    display: block;
+    padding: 12px 60px 12px 60px;
+  }
+}
+
+.navigation__list {
+  display: none;
+}
+
+.navigation__icon {
+  display: inline-block;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #3D444E;
+  border-radius: 50%;
+  background-color: #3D444E;
+}
+
+.navigation__link {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #b6b4c6;
+}
+
+.navigation__link--current {
+  color: #8f7fff;
+  background-color: rgba(143, 127, 255, 0.15);
+}
+
+.navigation__link--current::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #BFBAFA), color-stop(87%, #624BFF), color-stop(87%, #8F7FFF), color-stop(88%, #7F76F7));
+  background-image: linear-gradient(180deg, #BFBAFA 15%, #624BFF 87%, #8F7FFF 87%, #7F76F7 88%);
+  border-radius: 0px 0px 2px 2px;
+}
+
+.navigation__icon--current {
+  background-color: #8f7fff;
+}
+
+.select {
+  padding-top: 40px;
+  padding-bottom: 32px;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    font-family: $font-body;
+    background-color: $primery-bg-color;
+    color: $primery-text-color;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h3,h4,p{
+    margin: 0;
+    padding: 0;
+}
+
+.list {
+    @extend %list;
+}
+
+.link {
+    @extend %link;
+}
+
+.container {
+    @extend %container;
+
+}

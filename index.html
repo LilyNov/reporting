@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,32 +11,69 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-    <header>
-        <a href="index.html">
-            <img src="./img/logo.png" alt="logo">
-        </a>
+    <header class="header">
+        <div class="header__block">
+            <a class="link header__link" href="index.html">
+                <img class="header__logo" src="./img/logo.png" alt="logo">
+            </a>
+            <img class="navigation__avatar" src="./img/icons/avatar.png" alt="avatar">
+        </div>
         <nav class="navigation">
-            <span></span><a class="navigation__link" href="#">Summary</a>
-            <span></span><a class="navigation__link" href="#">Hours</a>
-            <span></span><a class="navigation__link" href="#">Projects</a>
-            <span></span><a class="navigation__link" href="#">Time reports</a>
-            <span></span><a class="navigation__link" href="#">Confirmation</a>
-            <span></span><a class="navigation__link" href="#">Mailer</a>
-            <span></span><a class="navigation__link" href="#">Compare</a>
+            <ul class="navigation__list">
+                <li class="item navigation__item">
+                    <a class="link navigation__link" href="#">
+                        <span class="navigation__icon"></span>
+                        Summary
+                    </a>
+                </li>
+                <li class="item navigation__item">
+                    <a class="link navigation__link" href="#">
+                        <span class="navigation__icon"></span>
+                        Hours
+                    </a>
+                </li>
+                <li class="item navigation__item navigation__item--current">
+                    <a class="link navigation__link navigation__link--current" href="#">
+                        <span class="navigation__icon navigation__icon--current"></span>
+                        Projects
+                    </a>
+                </li>
+                <li class="item navigation__item">
+                    <a class="link navigation__link" href="#"><span class="navigation__icon"></span>
+                        Time reports
+                    </a>
+                </li>
+                <li class="item navigation__item">
+                    <a class="link navigation__link" href="#"><span class="navigation__icon"></span>
+                        Confirmation
+                    </a>
+                </li>
+                <li class="item navigation__item">
+                    <a class="link navigation__link" href="#"><span class="navigation__icon"></span>
+                        Mailer
+                    </a>
+                </li>
+                <li class="item navigation__item">
+                    <a class="link navigation__link" href="#"><span class="navigation__icon"></span>
+                        Compare
+                    </a>
+                </li>
+            </ul>
         </nav>
-        <img src="./img/icons/avatar.png" alt="avatar">
     </header>
     <main>
         <section class="select">
             <div class="container">
+                <p>Dev</p>
                 <select class="select__dev">
                     <option>Jenny Wilson</option>
-                    <option>Wilson Jenny</option> 
+                    <option>Wilson Jenny</option>
                 </select>
                 <select class="select__status">
                     <option>All Statuses</option>
-                    <option>Status 1</option> 
+                    <option>Status 1</option>
                 </select>
                 <label class="select__efficiency">
                     <input class="select__checkbox" type="checkbox">
@@ -86,11 +124,11 @@
                 </div>
                 <div class="information">
                     <p class="information__text--purple">Team</p>
-                    <p>Jane Cooper, Wade Warren, Esther Howard, Cameron Williamson, 
-                        Brooklyn Simmons, Leslie Alexander, Jenny Wilson, Gur Hawkins, 
-                        Robert Fox, Jacob Jones, Kristin Watson, Cody Fisher, Savannah Nguen, 
-                        Bessie Cooper, Albert Flores, Ralph Edwards, Dianne Russel, Devon Lane, 
-                        Marvin McKinney, Jerome Bell, Courtney Henry, Theresa Webb, Kathrin Murphu, 
+                    <p>Jane Cooper, Wade Warren, Esther Howard, Cameron Williamson,
+                        Brooklyn Simmons, Leslie Alexander, Jenny Wilson, Gur Hawkins,
+                        Robert Fox, Jacob Jones, Kristin Watson, Cody Fisher, Savannah Nguen,
+                        Bessie Cooper, Albert Flores, Ralph Edwards, Dianne Russel, Devon Lane,
+                        Marvin McKinney, Jerome Bell, Courtney Henry, Theresa Webb, Kathrin Murphu,
                         Eleonora Pena, Floud Miles, Darrell Steward
                     </p>
                 </div>
@@ -153,10 +191,38 @@
                 </div>
             </div>
         </section>
-        <section class="efficiency"></section>
+        <section class="efficiency">
+            <div class="container">
+                <h3>Efficiency</h3>
+                <div>
+                    <h4>Total Efficiency</h4>
+                    <p>Changes</p>
+                    <p>Origin <span>2345.04h</span> <span>100%</span></p>
+                    <p>Average <span>2345.04h</span> <span>100%</span></p>
+                </div>
+                <div>
+                    <h4>Efficiency by Current Month (Sep)</h4>
+                    <p>Changes</p>
+                    <p>Origin <span>507.26h</span> <span>100%</span></p>
+                    <p>Average <span>507.26h</span> <span>100%</span></p>
+                </div>
+            </div>
+        </section>
         <section class="table"></section>
-        <section class="pagination"></section>
+        <section class="pagination">
+            <div class="container">
+                <p>Rows per page</p>
+                <select>
+                    <option>10</option>
+                    <option>5</option>
+                </select>
+                <p>1-10 of 20</p>
+            </div>
+        </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <p>2012-2020 © CMS Department of <span>NIX Solutions Ltd.</span></p>
+    </footer>
 </body>
+
 </html>
