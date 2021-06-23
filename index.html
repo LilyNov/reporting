@@ -66,21 +66,31 @@
     <main>
         <section class="select">
             <div class="container">
-                <p>Dev</p>
-                <select class="select__dev">
-                    <option>Jenny Wilson</option>
-                    <option>Wilson Jenny</option>
-                </select>
-                <select class="select__status">
-                    <option>All Statuses</option>
-                    <option>Status 1</option>
-                </select>
-                <label class="select__efficiency">
-                    <input class="select__checkbox" type="checkbox">
-                    Show Efficiency
-                </label>
-                <button class="select__apply">Apply</button>
-                <button class="select__filters">Reset Filters</button>
+                <p class="select__title">Dev</p>
+                <div class="select__wrapper select__wrapper--margin">
+                    <select class="select__box">
+                        <option>Jenny Wilson</option>
+                        <option>Wilson Jenny</option>
+                    </select>
+                </div>
+                <p class="select__title">Status</p>
+                <div class="select__wrapper select__wrapper--margin">
+                    <select class="select__box">
+                        <option>All Statuses</option>
+                        <option>Status 1</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="select__efficiency">
+                        <input class="select__input" type="checkbox" checked>
+                        <span class="select__checkbox"></span>
+                        Show Efficiency
+                    </label>
+                </div>
+                <div>
+                    <button class="select__button">Apply</button>
+                    <button class="select__button select__button--transparent">Reset Filters</button>
+                </div>
             </div>
         </section>
         <section class="project-information">
@@ -212,10 +222,12 @@
         <section class="pagination">
             <div class="container">
                 <p>Rows per page</p>
-                <select>
-                    <option>10</option>
-                    <option>5</option>
-                </select>
+                <div class="select__wrapper">
+                    <select class="select__box">
+                        <option>10</option>
+                        <option>5</option>
+                    </select>
+                </div>
                 <p>1-10 of 20</p>
             </div>
         </section>

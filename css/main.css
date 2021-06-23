@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .list {
   list-style: none;
   margin: 0;
@@ -121,5 +122,139 @@ h3, h4, p {
 .select {
   padding-top: 40px;
   padding-bottom: 32px;
+}
+
+.select div:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+.select__title {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #c7bfff;
+}
+
+.select__wrapper {
+  position: relative;
+}
+
+.select__wrapper::after {
+  position: absolute;
+  content: '';
+  top: 40%;
+  left: 175px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  border-top: transparent;
+  border-left: transparent;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.select__box {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 10px 76px 9px 16px;
+  width: 200px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #b6b4c6;
+  background: #242B35;
+  border: 1px solid #3D444E;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.select__efficiency {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+/* Прячем чекбокс от браузера */
+.select__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Оформляем чекбокс */
+.select__checkbox {
+  display: inline-block;
+  width: 15px;
+  height: 16px;
+  margin: 0;
+  margin-right: 5px;
+  background-image: url("../img/icons/nocheck.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.select__input:checked + .select__checkbox,
+.select__input:checked:focus + .select__checkbox {
+  background-image: url("../img/icons/check.svg");
+  background-size: contain;
+  background-color: #8f7fff;
+  border: transparent;
+  border-radius: 4px;
+}
+
+.select__button {
+  margin-right: 24px;
+  padding: 10px 28px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  border-radius: 7px;
+  color: white;
+  background-color: #8f7fff;
+  border: 1px solid #8f7fff;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 296px) {
+  .select__button {
+    margin-right: 20px;
+    margin-bottom: 24px;
+  }
+}
+
+.select__button--transparent {
+  margin-right: 0;
+  color: #8f7fff;
+  background-color: transparent;
+  border: 1px solid #8f7fff;
+}
+
+.pagination .select__box {
+  width: 61px;
+  padding: 10px 0 9px 12px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.pagination .select__wrapper::after {
+  left: 35px;
 }
 /*# sourceMappingURL=main.css.map */
