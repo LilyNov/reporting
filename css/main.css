@@ -257,4 +257,129 @@ h3, h4, p {
 .pagination .select__wrapper::after {
   left: 35px;
 }
+
+.projects {
+  padding-bottom: 24px;
+}
+
+.projects__card {
+  position: relative;
+  padding: 34px 10px 34px 34px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 18px;
+  background-color: #242B35;
+  border: 1px solid #3D444E;
+  border-radius: 7px;
+}
+
+.projects__card::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 30%;
+  display: block;
+  width: 8px;
+  height: 50%;
+  background-image: linear-gradient(269deg, #d0ccfa 15.3%, #624BFF 98.74%, #8F7FFF 87.74%, #7F76F7 87.74%);
+  border-radius: 0 7px 7px 0;
+}
+
+.projects__card:first-child {
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .projects__card {
+    font-size: 14px;
+    line-height: 21px;
+    padding: 40px 64px;
+  }
+}
+
+.projects__title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 22px;
+  text-transform: capitalize;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .projects__title {
+    margin-bottom: 24px;
+    font-size: 16px;
+  }
+}
+
+.information__text--purple {
+  margin-right: 15px;
+  font-weight: 600;
+  color: #c7bfff;
+  width: 65px;
+}
+
+@media screen and (min-width: 768px) {
+  .information__text--purple {
+    width: 155px;
+  }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  td {
+    margin-bottom: 16px;
+  }
+}
+
+p {
+  display: block;
+  text-align-last: left;
+}
+
+.block--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.block--flex p {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.block--flex span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.block {
+  width: calc(100% / 2);
+}
+
+.block__text--purple {
+  margin-bottom: 16px;
+  font-weight: 400;
+  color: #c7bfff;
+}
+
+.block__text--bold {
+  font-weight: 600;
+}
 /*# sourceMappingURL=main.css.map */
