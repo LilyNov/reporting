@@ -1,0 +1,38 @@
+.efficiency {
+  padding-bottom: 40px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 18px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 21px;
+
+    .block--flex {
+      display: flex;
+    }
+
+    .list {
+      display: block;
+      width: calc(100% / 2);
+
+      &:first-child {
+        margin-right: 40px;
+      }
+    }
+  }
+}
+
+.efficiency__card {
+  padding: 40px 65px;
+}
+.efficiency__title {
+  @extend %title;
+  margin-bottom: 24px;
+}
+
+.list {
+  &:first-child {
+    margin-bottom: 40px;
+  }
+}

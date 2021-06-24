@@ -1,30 +1,67 @@
 body {
-    margin: 0;
-    font-family: $font-body;
-    background-color: $primery-bg-color;
-    color: $primery-text-color;
+  margin: 0;
+  font-family: $font-body;
+  background-color: $primery-bg-color;
+  color: $primery-text-color;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-h3, h4, p {
-    margin: 0;
-    padding: 0;
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
 }
 
 .list {
-    @extend %list;
+  @extend %list;
 }
 
 .link {
-    @extend %link;
+  @extend %link;
 }
 
 .container {
-    @extend %container;
+  @extend %container;
+}
 
+.card {
+  position: relative;
+  padding: 34px 10px 34px 34px;
+  background-color: $box-background-color;
+  border: 1px solid $border-color;
+  border-radius: 7px;
+
+  &::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 30%;
+    display: block;
+    width: 8px;
+    height: 50%;
+    background-image: linear-gradient(
+      269deg,
+      #d0ccfa 15.3%,
+      #624bff 98.74%,
+      #8f7fff 87.74%,
+      #7f76f7 87.74%
+    );
+    border-radius: 0 7px 7px 0;
+  }
+}
+
+.list__text--purple {
+  font-weight: 400;
+  margin-bottom: 16px;
+  color: $labels-text-color;
+}
+
+.list__text--bold {
+  font-weight: 600;
 }
