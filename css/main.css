@@ -49,8 +49,8 @@ p {
 .card {
   position: relative;
   padding: 34px 10px 34px 34px;
-  background-color: #242B35;
-  border: 1px solid #3D444E;
+  background-color: #242b35;
+  border: 1px solid #3d444e;
   border-radius: 7px;
 }
 
@@ -88,7 +88,7 @@ p {
           justify-content: space-between;
   padding-left: 15px;
   padding-right: 15px;
-  border-bottom: 1px solid #3D444E;
+  border-bottom: 1px solid #3d444e;
 }
 
 .header__link {
@@ -98,7 +98,7 @@ p {
 .navigation__avatar {
   display: none;
   padding: 12px 0 15px 14px;
-  border-left: 1px solid #3D444E;
+  border-left: 1px solid #3d444e;
 }
 
 @media screen and (min-width: 768px) {
@@ -117,9 +117,9 @@ p {
   margin-right: 10px;
   width: 20px;
   height: 20px;
-  border: 1px solid #3D444E;
+  border: 1px solid #3d444e;
   border-radius: 50%;
-  background-color: #3D444E;
+  background-color: #3d444e;
 }
 
 .navigation__link {
@@ -210,8 +210,8 @@ p {
   font-size: 14px;
   line-height: 21px;
   color: #b6b4c6;
-  background: #242B35;
-  border: 1px solid #3D444E;
+  background: #242b35;
+  border: 1px solid #3d444e;
   border-radius: 7px;
   cursor: pointer;
 }
@@ -320,6 +320,12 @@ p {
     display: -ms-flexbox;
     display: flex;
   }
+  .projects .projects__card {
+    width: calc(100% / 2);
+  }
+  .projects .projects__card:first-child {
+    margin-right: 24px;
+  }
 }
 
 .projects__card {
@@ -407,7 +413,7 @@ li {
 }
 
 li:not(:last-child) {
-  border-bottom: 1px solid #3D444E;
+  border-bottom: 1px solid #3d444e;
 }
 
 .efficiency {
@@ -446,5 +452,19 @@ li:not(:last-child) {
 
 .list:first-child {
   margin-bottom: 40px;
+}
+
+.footer {
+  padding-top: 40px;
+  padding-bottom: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: white;
+}
+
+.footer span {
+  color: #8f7fff;
 }
 /*# sourceMappingURL=main.css.map */

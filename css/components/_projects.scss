@@ -14,6 +14,13 @@
     .block--flex {
       display: flex;
     }
+
+    .projects__card {
+      width: calc(100% / 2);
+      &:first-child {
+        margin-right: 24px;
+      }
+    }
   }
 }
 
