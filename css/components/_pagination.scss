@@ -1,13 +1,113 @@
 .pagination {
-    .select__box {
-        width: 61px;
-        padding: 10px 0 9px 12px;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 21px;
+  margin-left: 32px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  .select__box {
+    width: 61px;
+    padding: 10px 32px 9px 12px;
+    font-weight: normal;
+  }
+  .select__wrapper::after {
+    left: 35px;
+  }
 
+  div:not(:last-child) {
+    margin-right: 12px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 21px;
+
+    .select__box {
+      font-size: 14px;
+      line-height: 21px;
     }
-    .select__wrapper::after {
-        left: 35px;
-    }
+  }
+}
+
+.btn__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 122px;
+  height: 40px;
+  padding: 12px;
+  background: $box-background-color;
+  border: 1px solid $border-color;
+  border-radius: 7px;
+}
+
+.btn {
+  position: relative;
+  background-color: transparent;
+  outline: none;
+  border: transparent;
+  color: $primery-text-color;
+  cursor: pointer;
+}
+
+.btn__triangle {
+  width: 10px;
+  height: 20px;
+}
+
+.btn:first-child {
+  &::before {
+    position: absolute;
+    content: '';
+    top: 7px;
+    left: 0;
+    transform: translateY(-50%);
+
+    display: block;
+    width: 6px;
+    height: 6px;
+
+    border-bottom: 1px solid rgba(80, 85, 93, 1);
+    border-right: 1px solid rgba(80, 85, 93, 1);
+    border-top: transparent;
+    border-left: transparent;
+
+    transform: rotate(135deg);
+    pointer-events: none;
+    cursor: pointer;
+  }
+}
+
+.btn:last-child {
+  &::before {
+    position: absolute;
+    content: '';
+    top: 7px;
+    left: 2;
+    transform: translateY(-50%);
+
+    display: block;
+    width: 6px;
+    height: 6px;
+
+    border-bottom: 1px solid $white-color;
+    border-right: 1px solid $white-color;
+    border-top: transparent;
+    border-left: transparent;
+
+    transform: rotate(315deg);
+    cursor: pointer;
+  }
+}
+
+.btn.active {
+  padding: 2px 7px;
+  border-radius: 2px;
+  background-color: $labels-primary-color;
+  color: $white-color;
+}
+
+.btn__triangle--active {
+  //
 }

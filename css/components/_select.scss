@@ -1,123 +1,128 @@
 .select {
-    padding-top: 40px;
-    padding-bottom: 32px;
-}
-
-.select div:not(:last-child) {
+  font-size: 12px;
+  line-height: 18px;
+  padding-top: 40px;
+  padding-bottom: 32px;
+  & div:not(:last-child) {
     margin-bottom: 28px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 21px;
+  }
 }
 
 .select__title {
-    margin-bottom: 8px;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 21px;
-    color: $labels-text-color;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: $labels-text-color;
 }
 
 .select__wrapper {
-    position: relative;
+  position: relative;
 }
 
 .select__wrapper::after {
-    position: absolute;
-    content: '';
-    top: 40%;
-    left: 175px;
-    transform: translateY(-50%);
+  position: absolute;
+  content: '';
+  top: 40%;
+  left: 175px;
+  transform: translateY(-50%);
 
-    display: block;
-    width: 6px;
-    height: 6px;
+  display: block;
+  width: 6px;
+  height: 6px;
 
-    border-bottom: 1px solid $white-color;
-    border-right: 1px solid $white-color;
-    border-top: transparent;
-    border-left: transparent;
+  border-bottom: 1px solid $white-color;
+  border-right: 1px solid $white-color;
+  border-top: transparent;
+  border-left: transparent;
 
-    transform:rotate(45deg);	
-    pointer-events: none;
-    cursor: pointer;
+  transform: rotate(45deg);
+  pointer-events: none;
+  cursor: pointer;
 }
 
 .select__box {
-    appearance: none;
-    padding: 10px 76px 9px 16px;
-    width: 200px;
-    height: 40px;
-    font-size: 14px;
-    line-height: 21px;
-    color: $primery-text-color;
-    background: $box-background-color;
-    border: 1px solid $border-color;
-    border-radius: 7px;
-    cursor: pointer;
+  appearance: none;
+  padding: 10px 76px 9px 16px;
+  width: 200px;
+  height: 40px;
+
+  color: $primery-text-color;
+  background: $box-background-color;
+  border: 1px solid $border-color;
+  border-radius: 7px;
+  cursor: pointer;
 }
 
 .select__efficiency {
-    display: block;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 21px;
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
 }
 
 /* Прячем чекбокс от браузера */
 .select__input {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* Оформляем чекбокс */
 .select__checkbox {
-    display:inline-block;
-    width: 15px;
-    height: 16px;
-    margin: 0;
-    margin-right: 5px;
+  display: inline-block;
+  width: 15px;
+  height: 16px;
+  margin: 0;
+  margin-right: 5px;
 
-    background-image: url('../img/icons/nocheck.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: 1px solid $white-color;
-    border-radius: 4px;
-    cursor: pointer;
+  background-image: url('../img/icons/nocheck.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid $white-color;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .select__input:checked + .select__checkbox,
 .select__input:checked:focus + .select__checkbox {
-    background-image: url('../img/icons/check.svg');
-    background-size: contain;
-    background-color: $labels-primary-color;
-    border: transparent;
-    border-radius: 4px;
+  background-image: url('../img/icons/check.svg');
+  background-size: contain;
+  background-color: $labels-primary-color;
+  border: transparent;
+  border-radius: 4px;
 }
 
 .select__button {
-    margin-right: 24px;
-    padding: 10px 28px;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 21px;
-    border-radius: 7px;
-    color: $white-color;
-    background-color: $labels-primary-color;
-    border: 1px solid $labels-primary-color;
-    cursor: pointer;
-    @media screen and (max-width: 296px) {
-        margin-right: 20px;
-        margin-bottom: 24px;
-    }
+  margin-right: 24px;
+  padding: 10px 28px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  border-radius: 7px;
+  color: $white-color;
+  background-color: $labels-primary-color;
+  border: 1px solid $labels-primary-color;
+  cursor: pointer;
+  @media screen and (max-width: 296px) {
+    margin-right: 20px;
+    margin-bottom: 24px;
+  }
 }
 
 .select__button--transparent {
-    margin-right: 0;
-    color: $labels-primary-color;
-    background-color: transparent;
-    border: 1px solid $labels-primary-color
+  margin-right: 0;
+  color: $labels-primary-color;
+  background-color: transparent;
+  border: 1px solid $labels-primary-color;
 }

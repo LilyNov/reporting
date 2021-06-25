@@ -1,4 +1,4 @@
-[
+{"page1": [
     {
         "Task name": "Search page mockup",
         "Developer": ["Robert Fox, Kent Peacock"],
@@ -89,4 +89,100 @@
         "My Time spent by Period (h)": 23.00,
         "Efficiency": "100%"
     }
+
+],
+
+"page2": [
+    {
+        "Task name": "Search page mockup",
+        "Developer": ["Robert Fox, Kent Peacock"],
+        "Work Type": ["Programming, Meetings"],
+        "Status": "Сompleted",
+        "Estimation (h)": 0.0,
+        "Total time spent by All": 232.17,
+        "My Time spent by Period (h)": 23.00,
+        "Efficiency": "100%"
+    },
+    {
+        "Task name": "Two levels of the menu mockup",
+        "Developer": ["Robert Fox"],
+        "Work Type": ["Graphic Design"],
+        "Status": "Non completed",
+        "Estimation (h)": 0.0,
+        "Total time spent by All": 1567.60,
+        "My Time spent by Period (h)": 15.00,
+        "Efficiency": "-"
+    },
+    {
+        "Task name": "Edit pictures",
+        "Developer": ["Dianne Russel, Adam Gordon"],
+        "Work Type": ["Graphic Design"],
+        "Status": "Non completed",
+        "Estimation (h)": 0.0,
+        "Total time spent by All": 678.20,
+        "My Time spent by Period (h)": 67.00,
+        "Efficiency": "-"
+    },
+    {
+        "Task name": "Subdomain home pages mockup",
+        "Developer": ["Dianne Russel"],
+        "Work Type": ["Graphic Design"],
+        "Status": "Non completed",
+        "Estimation (h)": 0.0,
+        "Total time spent by All": 756.70,
+        "My Time spent by Period (h)": 75.00,
+        "Efficiency": "-"
+    },
+    {
+        "Task name": "Landing page mockup",
+        "Developer": ["Dianne Russel"],
+        "Work Type": ["Graphic Design"],
+        "Status": "Non completed",
+        "Estimation (h)": 0.0,
+        "Total time spent by All": 345.60,
+        "My Time spent by Period (h)": 45.00,
+        "Efficiency": "-"
+    },
+    {
+        "Task name": "Search page mockup",
+        "Developer": ["Courtney Henry, Kent Peacock"],
+        "Work Type": ["Programming, Meetings"],
+        "Status": "Сompleted",
+        "Estimation (h)": 0.0,
+        "Total time spent by All": 232.17,
+        "My Time spent by Period (h)": 23.00,
+        "Efficiency": "100%"
+    },
+    {
+        "Task name": "Landing page mockup",
+        "Developer": ["Courtney Henry, Augusta Walter"],
+        "Work Type": ["Graphic Design"],
+        "Status": "Non completed",
+        "Estimation (h)": 0.0,
+        "Total time spent by All": 345.60,
+        "My Time spent by Period (h)": 45.00,
+        "Efficiency": "-"
+    },
+    {
+        "Task name": "Search page mockup",
+        "Developer": ["Courtney Henry, Kent Peacock"],
+        "Work Type": ["Programming, Meeting"],
+        "Status": "Сompleted",
+        "Estimation (h)": 0.0,
+        "Total time spent by All": 232.17,
+        "My Time spent by Period (h)": 23.00,
+        "Efficiency": "100%"
+    },
+    {
+        "Task name": "Search page mockup",
+        "Developer": ["Courtney Henry, Kent Peacock, Nick Johnson, Ralph Edward, Kate Middleton, Dianne Russel"],
+        "Work Type": ["Programming, Meeting, Markup, Graphic Design"],
+        "Status": "Сompleted",
+        "Estimation (h)": 0.0,
+        "Total time spent by All": 232.17,
+        "My Time spent by Period (h)": 23.00,
+        "Efficiency": "100%"
+    }
+
 ]
+}

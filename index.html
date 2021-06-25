@@ -289,17 +289,45 @@
 
             </div>
         </section>
-        <section class="table"></section>
+        <section class="table">
+            <div class="container">
+            <table class="table-box">
+                <thead>
+                    <tr class="table-box__title">
+                        <th>Task name <button><img src="./img/icons/sort.png" alt="sort button"></button></th>
+                        <th>Developer<button><img src="./img/icons/sort.png" alt="sort button"></button></th>
+                        <th>Work Type<button><img src="./img/icons/sort.png" alt="sort button"></button></th>
+                        <th>Status<button><img src="./img/icons/sort.png" alt="sort button"></button></th>
+                        <th>Estimation (h)<button><img src="./img/icons/sort.png" alt="sort button"></button></th>
+                        <th>Total time spent <br> by All<button><img src="./img/icons/sort.png" alt="sort button"></button></th>
+                        <th>My Time spent by <br> Period (h) <button><img src="./img/icons/sort.png" alt="sort button"></button></th>
+                        <th>Efficiency <button><img src="./img/icons/sort.png" alt="sort button"></button></th>
+                    </tr>
+                </thead>
+                <tbody data-table></tbody>
+            </table>
+            </div>
+        </section>
         <section class="pagination">
             <div class="container">
-                <p>Rows per page</p>
+                <div>
+                    <p>Rows per page</p>
+                </div>
                 <div class="select__wrapper">
                     <select class="select__box">
                         <option>10</option>
                         <option>5</option>
                     </select>
                 </div>
+                <div>
                 <p>1-10 of 20</p>
+                </div>
+                <div class="btn__box">
+                    <button class="btn btn__triangle" data-btn-back></button>
+                    <button class="btn active" data-page-first>1</button>
+                    <button class="btn" data-page-last>2</button>
+                    <button class="btn btn__triangle" data-btn-to></button>
+                </div>
             </div>
         </section>
     </main>
@@ -308,6 +336,7 @@
         <p>2012-2020 © CMS Department of <span>NIX Solutions Ltd.</span></p>
         </div>
     </footer>
+    <script src="js/script.js" type="module"></script>
 </body>
 
 </html>
