@@ -4,6 +4,10 @@
   font-size: 10px;
   line-height: 18px;
 
+  li:not(:last-child) {
+    border-bottom: 1px solid $border-color;
+  }
+
   @media screen and (min-width: 980px) {
     font-size: 14px;
     line-height: 21px;
@@ -90,8 +94,4 @@ li {
   justify-content: space-between;
   padding-top: 8px;
   padding-bottom: 8px;
-}
-
-li:not(:last-child) {
-  border-bottom: 1px solid $border-color;
 }

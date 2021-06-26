@@ -5,6 +5,10 @@ body {
   color: $primery-text-color;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 *,
 *::before,
 *::after {

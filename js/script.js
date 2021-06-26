@@ -1,19 +1,18 @@
-// import tableData from '../table.json';
-
-// console.log(tableData);
-
 const refs = {
   table: document.querySelector('[data-table]'),
   btnBackPage: document.querySelector('[data-btn-back]'),
   btnFirstPage: document.querySelector('[data-page-first]'),
   btnLastPage: document.querySelector('[data-page-last]'),
   btnToPage: document.querySelector('[data-btn-to]'),
+  nav: document.querySelector('.nav'),
+  iconMenu: document.querySelector('.menu__icon'),
 };
 
 refs.btnBackPage.addEventListener('click', OnBackPage);
 refs.btnFirstPage.addEventListener('click', OnfirstPage);
 refs.btnLastPage.addEventListener('click', OnLastPage);
 refs.btnToPage.addEventListener('click', OnToPage);
+refs.iconMenu.addEventListener('click', onBurgerMenu);
 
 let strInTable = 8;
 let step = 9;
@@ -76,4 +75,13 @@ function OnBackPage() {
 
 function OnToPage() {
   OnLastPage();
+}
+
+// burger menu
+
+function onBurgerMenu() {
+  console.log('click');
+  document.body.classList.toggle('lock');
+  refs.iconMenu.classList.toggle('active');
+  refs.nav.classList.toggle('active');
 }

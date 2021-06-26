@@ -12,10 +12,10 @@
   }
 
   .table-box {
-    width: 100%;
+    // width: 100%;
     border-collapse: collapse;
     th {
-      min-width: 140px;
+      // min-width: 140px;
       background-color: rgba(45, 51, 61, 1);
       border-bottom: 8px solid $primery-bg-color;
       &:nth-child(n + 5) {
@@ -24,7 +24,7 @@
     }
 
     td {
-      width: 160px;
+      // min-width: 140px;
       border-bottom: 8px solid $primery-bg-color;
       &:nth-child(-n + 4) {
         text-align-last: left;
