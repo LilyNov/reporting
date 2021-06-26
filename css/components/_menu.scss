@@ -4,20 +4,21 @@
   left: 0;
   width: 100%;
   z-index: 10;
+  background-color: $primery-bg-color;
 }
 
 .header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 15px;
-  padding-right: 15px;
-  min-height: 70px; //м.б. не нужно
+  padding-left: 60px;
+  height: 70px; //м.б. не нужно
   border-bottom: 1px solid $border-color;
+  //   background-color: $primery-bg-color;
 }
 
 .header__logo {
-  //
+  //   margin-left: 15px;
 }
 
 .menu__icon {
@@ -28,7 +29,8 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: 15px;
+  padding: 24px;
+
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
@@ -37,7 +39,6 @@
 
 .nav__item {
   position: relative;
-  margin-left: 20px;
 }
 
 .nav__icon--current {
@@ -70,10 +71,7 @@
   .nav__list {
     display: flex;
     align-items: center;
-
-    .nav__list > li {
-      padding: 10px 0;
-    }
+    justify-content: space-evenly;
   }
 }
 
@@ -81,6 +79,7 @@
   .menu__icon {
     position: relative;
     display: block;
+    margin-right: 30px;
     width: 30px;
     height: 18px;
     z-index: 5;
@@ -133,7 +132,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
-    padding: 100px 30px 30px 30px;
+    padding: 100px 0 30px 0px;
     transition: left 0.3s ease 0s;
     overflow: auto;
   }
@@ -149,7 +148,7 @@
     top: 0;
     left: 0;
     height: 70px; //...........
-    background-color: $primery-bg-color;
+    // background-color: $primery-bg-color;
     z-index: 2;
   }
 
@@ -177,15 +176,15 @@
 //   padding: 12px 0 15px 0;
 // }
 
-// .navigation__avatar {
-//   display: none;
-//   padding: 12px 0 15px 14px;
-//   border-left: 1px solid $border-color;
-//   @media screen and (min-width: 768px) {
-//     display: block;
-//     padding: 12px 60px 12px 60px;
-//   }
-// }
+.nav__avatar {
+  display: none;
+  padding: 12px 0 15px 14px;
+  border-left: 1px solid $border-color;
+  @media screen and (min-width: 768px) {
+    display: block;
+    padding: 12px 60px 12px 60px;
+  }
+}
 
 // .navigation__list {
 //   display: none;

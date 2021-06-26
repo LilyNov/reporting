@@ -4,6 +4,30 @@
   font-size: 10px;
   line-height: 18px;
 
+  .efficiency__card {
+    padding: 40px 65px;
+  }
+
+  .efficiency__title {
+    @extend %title;
+    margin-bottom: 24px;
+  }
+
+  .list {
+    &:first-child {
+      margin-bottom: 40px;
+    }
+
+    & li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid $border-color;
+    }
+  }
+
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: 21px;
@@ -20,19 +44,5 @@
         margin-right: 40px;
       }
     }
-  }
-}
-
-.efficiency__card {
-  padding: 40px 65px;
-}
-.efficiency__title {
-  @extend %title;
-  margin-bottom: 24px;
-}
-
-.list {
-  &:first-child {
-    margin-bottom: 40px;
   }
 }

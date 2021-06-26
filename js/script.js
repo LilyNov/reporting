@@ -6,6 +6,8 @@ const refs = {
   btnToPage: document.querySelector('[data-btn-to]'),
   nav: document.querySelector('.nav'),
   iconMenu: document.querySelector('.menu__icon'),
+  navLink: document.querySelectorAll('.nav__link'),
+  loader: document.querySelector('.mask'),
 };
 
 refs.btnBackPage.addEventListener('click', OnBackPage);
@@ -56,17 +58,34 @@ function createList(d) {
 // pagination
 
 function OnfirstPage() {
+  refs.btnLastPage.classList.remove('active');
+  refs.btnFirstPage.classList.add('active');
   min = 0;
   max = min + strInTable;
-  refs.table.innerHTML = '';
-  renderList(min, max);
+  refs.loader.classList.add('hide');
+  refs.table.style.opacity = 0;
+  setTimeout(() => {
+    refs.table.innerHTML = '';
+    renderList(min, max);
+    refs.loader.classList.remove('hide');
+    refs.table.style.opacity = 1;
+  }, 1200);
 }
 
 function OnLastPage() {
+  refs.btnLastPage.classList.add('active');
+  refs.btnFirstPage.classList.remove('active');
   min = min + step;
   max = min + strInTable;
-  refs.table.innerHTML = '';
-  renderList(min, max);
+  refs.loader.classList.add('hide');
+  refs.table.style.opacity = 0;
+
+  setTimeout(() => {
+    refs.table.innerHTML = '';
+    renderList(min, max);
+    refs.loader.classList.remove('hide');
+    refs.table.style.opacity = 1;
+  }, 1200);
 }
 
 function OnBackPage() {
@@ -80,8 +99,14 @@ function OnToPage() {
 // burger menu
 
 function onBurgerMenu() {
-  console.log('click');
   document.body.classList.toggle('lock');
   refs.iconMenu.classList.toggle('active');
   refs.nav.classList.toggle('active');
+  onMenu();
+}
+
+function onMenu() {
+  refs.navLink.forEach(elem => {
+    elem.addEventListener('click', () => onBurgerMenu());
+  });
 }
