@@ -26,39 +26,43 @@
                         <ul class="nav__list list">
                             <li class="item nav__item nav__item--current">
                                 <a class="nav__link link" href="#">
-                                    <span class="link__icon"></span>
+                                    <img class="link__icon" src="./img/icons/summary.png" alt="icon">
                                     Summary
                                 </a>
                             </li>
                             <li class="item nav__item">
                                 <a class="nav__link link" href="#">
-                                    <span class="link__icon"></span>
+                                    <img class="link__icon" src="./img/icons/hours.png" alt="icon">
                                     Hours
                                 </a>
                             </li>
                             <li class="item nav__item nav__item--current">
                                 <a class="link nav__link nav__link--current" href="#">
-                                    <span class="nav__icon nav__icon--current"></span>
+                                    <img class="link__icon" src="./img/icons/projects.png" alt="icon">
                                     Projects
                                 </a>
                             </li>
                             <li class="item nav__item">
-                                <a class="link nav__link" href="#"><span class="nav__icon"></span>
+                                <a class="link nav__link" href="#">
+                                    <img class="link__icon" src="./img/icons/time-reports.png" alt="icon">
                                     Time reports
                                 </a>
                             </li>
                             <li class="item nav__item">
-                                <a class="link nav__link" href="#"><span class="nav__icon"></span>
+                                <a class="link nav__link" href="#">
+                                    <img class="link__icon" src="./img/icons/confirmation.png" alt="icon">
                                     Confirmation
                                 </a>
                             </li>
                             <li class="item nav__item">
-                                <a class="link nav__link" href="#"><span class="nav__icon"></span>
+                                <a class="link nav__link" href="#">
+                                    <img class="link__icon" src="./img/icons/mailer.png" alt="icon">
                                     Mailer
                                 </a>
                             </li>
                             <li class="item nav__item">
-                                <a class="link nav__link" href="#"><span class="nav__icon"></span>
+                                <a class="link nav__link" href="#">
+                                    <img class="link__icon" src="./img/icons/compare.png" alt="icon">
                                     Compare
                                 </a>
                             </li>
@@ -300,9 +304,6 @@
         </section>
         <section class="table">
             <div class="container">
-                <!-- <div class="mask">
-                    <div class="loader"></div>
-                </div> -->
             <table class="table-box" id="table">
                 <thead>
                     <tr class="table-box__title">
@@ -310,14 +311,18 @@
                         <th>Developer</th>
                         <th>Work Type</th>
                         <th>Status</th>
-                        <th>Estimation (h) ⇵</th>
-                        <th>Total time spent <br> by All ⇵</th>
-                        <th>My Time spent by <br> Period (h) ⇵</th>
-                        <th>Efficiency ⇵</th>
+                        <th data-type="number">Estimation (h) ⇵</th>
+                        <th data-type="number">Total time spent <br> by All ⇵</th>
+                        <th data-type="number">My Time spent by <br> Period (h) ⇵</th>
+                        <th data-type="text">Efficiency ⇵</th>
                     </tr>
                 </thead>
                 <tbody data-table></tbody>
             </table>
+            <div class="table__row"></div>
+            <div class="table__row">
+                <p>Sum</p>
+            </div>
             </div>
         </section>
         <section class="pagination">
@@ -335,7 +340,7 @@
                 <p>1-10 of 20</p>
                 </div>
                 <div class="btn__box">
-                    <button class="btn btn__triangle" data-btn-back></button>
+                    <button class="btn btn__triangle" id="back" data-btn-back></button>
                     <button class="btn active" data-page-first>1</button>
                     <button class="btn" data-page-last>2</button>
                     <button class="btn btn__triangle" data-btn-to></button>

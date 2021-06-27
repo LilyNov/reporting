@@ -12,13 +12,19 @@
   align-items: center;
   justify-content: space-between;
   padding-left: 60px;
-  height: 70px; //м.б. не нужно
+  height: 70px;
   border-bottom: 1px solid $border-color;
-  //   background-color: $primery-bg-color;
 }
 
-.header__logo {
-  //   margin-left: 15px;
+.nav__avatar {
+  display: none;
+  border-left: 1px solid $border-color;
+}
+
+.link__icon {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
 }
 
 .menu__icon {
@@ -29,6 +35,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   padding: 24px;
 
   font-weight: 600;
@@ -67,15 +74,20 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1315px) {
   .nav__list {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
   }
+
+  .nav__avatar {
+    display: block;
+    padding: 12px 60px 12px 60px;
+  }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1314px) {
   .menu__icon {
     position: relative;
     display: block;
@@ -147,8 +159,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    height: 70px; //...........
-    // background-color: $primery-bg-color;
+    height: 70px;
     z-index: 2;
   }
 
@@ -158,81 +169,6 @@
 
   .nav__link {
     font-size: 24px;
+    justify-content: center;
   }
 }
-
-// старое
-
-// .header__block {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   padding-left: 15px;
-//   padding-right: 15px;
-//   border-bottom: 1px solid $border-color;
-// }
-
-// .header__link {
-//   padding: 12px 0 15px 0;
-// }
-
-.nav__avatar {
-  display: none;
-  padding: 12px 0 15px 14px;
-  border-left: 1px solid $border-color;
-  @media screen and (min-width: 768px) {
-    display: block;
-    padding: 12px 60px 12px 60px;
-  }
-}
-
-// .navigation__list {
-//   display: none;
-// }
-
-// .navigation__icon {
-//   display: inline-block;
-//   margin-right: 10px;
-//   width: 20px;
-//   height: 20px;
-//   border: 1px solid $border-color;
-//   border-radius: 50%;
-//   background-color: $border-color;
-// }
-
-// .navigation__link {
-//   position: relative;
-//   display: flex;
-//   align-items: center;
-//   padding: 15px;
-//   font-weight: 600;
-//   font-size: 14px;
-//   line-height: 21px;
-//   color: $primery-text-color;
-// }
-
-// .navigation__link--current {
-//   color: $labels-primary-color;
-//   background-color: $current-bg-color;
-//   &::after {
-//     position: absolute;
-//     content: '';
-//     left: 0;
-//     bottom: 0;
-//     display: block;
-//     width: 100%;
-//     height: 3px;
-//     background-image: linear-gradient(
-//       180deg,
-//       #bfbafa 15%,
-//       #624bff 87%,
-//       #8f7fff 87%,
-//       #7f76f7 88%
-//     );
-//     border-radius: 0px 0px 2px 2px;
-//   }
-// }
-
-// .navigation__icon--current {
-//   background-color: $labels-primary-color;
-// }

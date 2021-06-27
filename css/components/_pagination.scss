@@ -59,7 +59,7 @@
   height: 20px;
 }
 
-.btn:first-child {
+#back {
   &::before {
     position: absolute;
     content: '';
@@ -109,8 +109,4 @@
   border-radius: 2px;
   background-color: $labels-primary-color;
   color: $white-color;
-}
-
-.btn__triangle--active {
-  //
 }

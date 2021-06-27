@@ -104,6 +104,17 @@ p {
   border-bottom: 1px solid #3d444e;
 }
 
+.nav__avatar {
+  display: none;
+  border-left: 1px solid #3d444e;
+}
+
+.link__icon {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+}
+
 .menu__icon {
   display: none;
 }
@@ -116,6 +127,8 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 24px;
   font-weight: 600;
   font-size: 14px;
@@ -149,7 +162,7 @@ p {
   border-radius: 0px 0px 2px 2px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1315px) {
   .nav__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -161,9 +174,13 @@ p {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+  .nav__avatar {
+    display: block;
+    padding: 12px 60px 12px 60px;
+  }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1314px) {
   .menu__icon {
     position: relative;
     display: block;
@@ -238,19 +255,9 @@ p {
   }
   .nav__link {
     font-size: 24px;
-  }
-}
-
-.nav__avatar {
-  display: none;
-  padding: 12px 0 15px 14px;
-  border-left: 1px solid #3d444e;
-}
-
-@media screen and (min-width: 768px) {
-  .nav__avatar {
-    display: block;
-    padding: 12px 60px 12px 60px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -283,6 +290,12 @@ p {
   .select .container > div:nth-child(3) {
     -ms-flex-item-align: end;
         align-self: flex-end;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 980px) {
+  .select .select__button {
+    margin-bottom: 20px;
   }
 }
 
@@ -482,7 +495,7 @@ p {
   height: 20px;
 }
 
-.btn:first-child::before {
+#back::before {
   position: absolute;
   content: '';
   top: 7px;
@@ -750,13 +763,38 @@ p {
   margin-bottom: 20px;
 }
 
-.table .table-box {
-  border-collapse: collapse;
+.table table {
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  margin-top: -4px;
+  /* correct offset on first border spacing if desired */
+}
+
+.table td,
+.table th {
+  border: solid 1px #171e28;
+  border-style: solid none;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.table td:first-child,
+.table th:first-child {
+  border-left-style: solid;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.table td:last-child,
+.table th:last-child {
+  border-right-style: solid;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .table .table-box th {
+  padding: 12px 30px;
   background-color: #2d333d;
-  border-bottom: 8px solid #171e28;
 }
 
 .table .table-box th:nth-child(n + 5) {
@@ -765,7 +803,8 @@ p {
 }
 
 .table .table-box td {
-  border-bottom: 8px solid #171e28;
+  min-width: 100px;
+  padding: 12px 30px;
 }
 
 .table .table-box td:nth-child(-n + 4) {
@@ -804,7 +843,7 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  height: 60%;
+  height: 65%;
   background-color: #171e28;
   position: fixed;
   top: 20%;
@@ -818,7 +857,7 @@ p {
 .table .loader {
   width: 55px;
   height: 55px;
-  border: 10px solid #8f7fff;
+  border: 7px solid #8f7fff;
   border-radius: 50%;
   border-left-color: rgba(143, 127, 255, 0.15);
   -webkit-animation: loader 1.3s linear infinite;
@@ -839,8 +878,43 @@ p {
   }
 }
 
-.table .hide {
-  opacity: 1;
+.table .table__row {
+  padding: 6px 30px 4px 30px;
+  background-color: #2d333d;
+  border-radius: 6px;
+}
+
+.table .table__row:last-child {
+  margin-top: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .table .table-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .table .table-box__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .table tbody {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .table tbody tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .footer {

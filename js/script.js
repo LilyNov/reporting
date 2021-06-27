@@ -50,13 +50,17 @@ function createList(d) {
                   <td>${d['Task name']}</td>
                   <td>${d['Developer']}</td>
                   <td>${d['Work Type']}</td>
-                  <td>${d['Status']}</td>
+                  <td id='status'>${d['Status']}</td>
                   <td>${d['Estimation (h)']}</td>
                   <td>${d['Total time spent by All']}</td>
                   <td>${d['My Time spent by Period (h)']}</td>
                   <td>${d['Efficiency']}</td>
-              </tr>`;
+              </tr>
+`;
+
   refs.tableBody.insertAdjacentHTML('beforeend', list);
+  const statusColor = document.querySelector('#status');
+  console.log(statusColor);
 }
 
 // pagination
@@ -122,15 +126,15 @@ function onMenu() {
 }
 
 // sort
-
-const sortFunc = index => {
+let total = 0;
+let arr = [];
+const sortFunc = (index, type) => {
   if (index === 0 || index === 1 || index === 2 || index === 3) return;
 
   const compare = (rowA, rowB) => {
     let dataRowsA = rowA.cells[index].innerHTML;
     let dataRowsB = rowB.cells[index].innerHTML;
-
-    return dataRowsA - dataRowsB;
+    return dataRowsA > dataRowsB ? 1 : -1;
   };
 
   let rows = [].slice.call(refs.tableBody.rows);
@@ -150,6 +154,7 @@ function tableSort(e) {
 
   if (elem.nodeName !== 'TH') return;
   const index = elem.cellIndex;
+  const type = elem.getAttribute('data-type');
 
-  sortFunc(index);
+  sortFunc(index, type);
 }
