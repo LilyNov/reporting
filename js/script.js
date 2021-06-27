@@ -1,5 +1,6 @@
 const refs = {
-  table: document.querySelector('[data-table]'),
+  tableContainer: document.querySelector('#table'),
+  tableBody: document.querySelector('[data-table]'),
   btnBackPage: document.querySelector('[data-btn-back]'),
   btnFirstPage: document.querySelector('[data-page-first]'),
   btnLastPage: document.querySelector('[data-page-last]'),
@@ -7,7 +8,6 @@ const refs = {
   nav: document.querySelector('.nav'),
   iconMenu: document.querySelector('.menu__icon'),
   navLink: document.querySelectorAll('.nav__link'),
-  loader: document.querySelector('.mask'),
 };
 
 refs.btnBackPage.addEventListener('click', OnBackPage);
@@ -15,11 +15,15 @@ refs.btnFirstPage.addEventListener('click', OnfirstPage);
 refs.btnLastPage.addEventListener('click', OnLastPage);
 refs.btnToPage.addEventListener('click', OnToPage);
 refs.iconMenu.addEventListener('click', onBurgerMenu);
+refs.tableContainer.addEventListener('click', tableSort);
 
 let strInTable = 8;
 let step = 9;
 let min = 0;
 let max = min + strInTable;
+const loaderMarkup = `<div class="mask">
+                    <div class="loader"></div>
+                </div>`;
 
 window.addEventListener('load', renderTable);
 
@@ -52,39 +56,45 @@ function createList(d) {
                   <td>${d['My Time spent by Period (h)']}</td>
                   <td>${d['Efficiency']}</td>
               </tr>`;
-  refs.table.insertAdjacentHTML('beforeend', list);
+  refs.tableBody.insertAdjacentHTML('beforeend', list);
 }
 
 // pagination
 
 function OnfirstPage() {
+  refs.tableContainer.insertAdjacentHTML('beforebegin', loaderMarkup);
+  const loader = document.querySelector('.mask');
+
   refs.btnLastPage.classList.remove('active');
   refs.btnFirstPage.classList.add('active');
   min = 0;
   max = min + strInTable;
-  refs.loader.classList.add('hide');
-  refs.table.style.opacity = 0;
+
+  refs.tableBody.style.opacity = 0;
   setTimeout(() => {
-    refs.table.innerHTML = '';
+    refs.tableBody.innerHTML = '';
     renderList(min, max);
-    refs.loader.classList.remove('hide');
-    refs.table.style.opacity = 1;
+    loader.remove();
+    refs.tableBody.style.opacity = 1;
   }, 1200);
 }
 
 function OnLastPage() {
+  refs.tableContainer.insertAdjacentHTML('beforebegin', loaderMarkup);
+  const loader = document.querySelector('.mask');
+
   refs.btnLastPage.classList.add('active');
   refs.btnFirstPage.classList.remove('active');
   min = min + step;
   max = min + strInTable;
-  refs.loader.classList.add('hide');
-  refs.table.style.opacity = 0;
+
+  refs.tableBody.style.opacity = 0;
 
   setTimeout(() => {
-    refs.table.innerHTML = '';
+    refs.tableBody.innerHTML = '';
     renderList(min, max);
-    refs.loader.classList.remove('hide');
-    refs.table.style.opacity = 1;
+    loader.remove();
+    refs.tableBody.style.opacity = 1;
   }, 1200);
 }
 
@@ -109,4 +119,37 @@ function onMenu() {
   refs.navLink.forEach(elem => {
     elem.addEventListener('click', () => onBurgerMenu());
   });
+}
+
+// sort
+
+const sortFunc = index => {
+  if (index === 0 || index === 1 || index === 2 || index === 3) return;
+
+  const compare = (rowA, rowB) => {
+    let dataRowsA = rowA.cells[index].innerHTML;
+    let dataRowsB = rowB.cells[index].innerHTML;
+
+    return dataRowsA - dataRowsB;
+  };
+
+  let rows = [].slice.call(refs.tableBody.rows);
+  rows.sort(compare);
+
+  refs.tableContainer.removeChild(refs.tableBody);
+
+  for (let i = 0; i < rows.length; i++) {
+    refs.tableBody.appendChild(rows[i]);
+  }
+
+  refs.tableContainer.appendChild(refs.tableBody);
+};
+
+function tableSort(e) {
+  const elem = e.target;
+
+  if (elem.nodeName !== 'TH') return;
+  const index = elem.cellIndex;
+
+  sortFunc(index);
 }
