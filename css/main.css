@@ -751,6 +751,10 @@ p {
   line-height: 18px;
 }
 
+.table .container {
+  margin-bottom: 20px;
+}
+
 .table .table-box__title {
   text-align: center;
   font-weight: 600;
@@ -759,34 +763,30 @@ p {
   color: white;
 }
 
-.table .container {
-  margin-bottom: 20px;
-}
-
-.table table {
+.table .table-box {
   border-collapse: separate;
   border-spacing: 0 8px;
   margin-top: -4px;
   /* correct offset on first border spacing if desired */
 }
 
-.table td,
-.table th {
+.table .table-box td,
+.table .table-box th {
   border: solid 1px #171e28;
   border-style: solid none;
   padding: 10px;
   margin-bottom: 20px;
 }
 
-.table td:first-child,
-.table th:first-child {
+.table .table-box td:first-child,
+.table .table-box th:first-child {
   border-left-style: solid;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
 
-.table td:last-child,
-.table th:last-child {
+.table .table-box td:last-child,
+.table .table-box th:last-child {
   border-right-style: solid;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
@@ -821,6 +821,14 @@ p {
 
 .table .table-box tr:nth-child(odd) {
   background-color: #1e242f;
+}
+
+.table .non {
+  color: #eb5757;
+}
+
+.table .сom {
+  color: #27ae60;
 }
 
 .table button {

@@ -4,6 +4,10 @@
   font-size: 12px;
   line-height: 18px;
 
+  .container {
+    margin-bottom: 20px;
+  }
+
   .table-box__title {
     text-align: center;
     font-weight: 600;
@@ -12,43 +16,35 @@
     color: $white-color;
   }
 
-  .container {
-    margin-bottom: 20px;
-  }
-
-  //
-  table {
+  .table-box {
     border-collapse: separate;
     border-spacing: 0 8px;
     margin-top: -4px; /* correct offset on first border spacing if desired */
-  }
-  td,
-  th {
-    border: solid 1px $primery-bg-color;
-    border-style: solid none;
-    padding: 10px;
-    margin-bottom: 20px;
-  }
-  td:first-child,
-  th:first-child {
-    border-left-style: solid;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
-  td:last-child,
-  th:last-child {
-    border-right-style: solid;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-  }
+    td,
+    th {
+      border: solid 1px $primery-bg-color;
+      border-style: solid none;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
 
-  //
-  .table-box {
-    // border-collapse: collapse;
+    td:first-child,
+    th:first-child {
+      border-left-style: solid;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+
+    td:last-child,
+    th:last-child {
+      border-right-style: solid;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
     th {
       padding: 12px 30px;
       background-color: rgba(45, 51, 61, 1);
-      // border-bottom: 8px solid $primery-bg-color;
       &:nth-child(n + 5) {
         text-align: right;
         cursor: pointer;
@@ -58,7 +54,6 @@
     td {
       min-width: 100px;
       padding: 12px 30px;
-      // border-bottom: 8px solid $primery-bg-color;
 
       &:nth-child(-n + 4) {
         text-align-last: left;
@@ -77,6 +72,14 @@
         background-color: rgba(30, 36, 47, 1);
       }
     }
+  }
+
+  .non {
+    color: $additional-red-color;
+  }
+
+  .сom {
+    color: $additional-green-color;
   }
 
   button {

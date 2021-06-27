@@ -50,7 +50,9 @@ function createList(d) {
                   <td>${d['Task name']}</td>
                   <td>${d['Developer']}</td>
                   <td>${d['Work Type']}</td>
-                  <td id='status'>${d['Status']}</td>
+                  <td class='${d['Status']
+                    .toLowerCase()
+                    .slice(0, 3)}' id='status'>${d['Status']}</td>
                   <td>${d['Estimation (h)']}</td>
                   <td>${d['Total time spent by All']}</td>
                   <td>${d['My Time spent by Period (h)']}</td>
@@ -59,8 +61,6 @@ function createList(d) {
 `;
 
   refs.tableBody.insertAdjacentHTML('beforeend', list);
-  const statusColor = document.querySelector('#status');
-  console.log(statusColor);
 }
 
 // pagination
