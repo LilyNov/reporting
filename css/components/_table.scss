@@ -146,8 +146,8 @@
       td,
       th {
         min-width: 100px;
-        border: solid 1px $primery-bg-color;
-        border-style: solid none;
+        border: solid 0px $primery-bg-color;
+        border-style: solid 0px transparent;
         margin-bottom: 20px;
       }
 
@@ -168,7 +168,7 @@
       th {
         background-color: rgba(45, 51, 61, 1);
         &:nth-child(n + 5) {
-          text-align: right;
+          text-align: center;
           cursor: pointer;
         }
       }

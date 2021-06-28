@@ -967,8 +967,8 @@ p {
   .table .table-box td,
   .table .table-box th {
     min-width: 100px;
-    border: solid 1px #171e28;
-    border-style: solid none;
+    border: solid 0px #171e28;
+    border-style: solid 0px transparent;
     margin-bottom: 20px;
   }
   .table .table-box td:first-child,
@@ -987,7 +987,7 @@ p {
     background-color: #2d333d;
   }
   .table .table-box th:nth-child(n + 5) {
-    text-align: right;
+    text-align: center;
     cursor: pointer;
   }
   .table .table-box td:nth-child(-n + 4) {
