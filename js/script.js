@@ -19,8 +19,10 @@ window.addEventListener(
   () => {
     if (window.innerWidth < 767) {
       document.location.reload();
+      return;
     } else if (window.innerWidth >= 767) {
       document.location.reload();
+      return;
     }
   },
   false,
