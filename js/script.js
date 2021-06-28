@@ -1,7 +1,5 @@
 import refs from './refs.js';
 
-console.log(refs);
-
 refs.btnBackPage.addEventListener('click', OnBackPage);
 refs.btnFirstPage.addEventListener('click', OnfirstPage);
 refs.btnLastPage.addEventListener('click', OnLastPage);
@@ -13,9 +11,7 @@ let strInTable = 8;
 let step = 9;
 let min = 0;
 let max = min + strInTable;
-const loaderMarkup = `<div class="mask">
-                    <div class="loader"></div>
-                </div>`;
+const loaderMarkup = `<div class="mask"><div class="loader"></div></div>`;
 
 window.addEventListener('load', renderTable);
 window.addEventListener(
@@ -165,9 +161,7 @@ function onMenu() {
 }
 
 // sort
-let total = 0;
-let arr = [];
-const sortFunc = (index, type) => {
+const sortFunc = index => {
   if (index === 0 || index === 1 || index === 2 || index === 3) return;
 
   const compare = (rowA, rowB) => {
@@ -190,10 +184,8 @@ const sortFunc = (index, type) => {
 
 function tableSort(e) {
   const elem = e.target;
-
   if (elem.nodeName !== 'TH') return;
   const index = elem.cellIndex;
-  const type = elem.getAttribute('data-type');
 
-  sortFunc(index, type);
+  sortFunc(index);
 }
