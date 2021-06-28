@@ -1,5 +1,6 @@
 const refs = {
   tableContainer: document.querySelector('#table'),
+  tableHeadPc: document.querySelector('[id="thead-pc"]'),
   tableBody: document.querySelector('[data-table]'),
   btnBackPage: document.querySelector('[data-btn-back]'),
   btnFirstPage: document.querySelector('[data-page-first]'),
@@ -26,6 +27,17 @@ const loaderMarkup = `<div class="mask">
                 </div>`;
 
 window.addEventListener('load', renderTable);
+window.addEventListener(
+  `resize`,
+  () => {
+    if (window.innerWidth < 767) {
+      document.location.reload();
+    } else if (window.innerWidth >= 767) {
+      document.location.reload();
+    }
+  },
+  false,
+);
 
 function renderTable() {
   renderList(min, max);
@@ -40,9 +52,45 @@ async function renderList(min, max) {
   render.then(data => {
     for (let i = min; i <= max; i++) {
       const d = data[i];
-      createList(d);
+      if (window.innerWidth < 767) {
+        createTabelMobile(d);
+      } else {
+        createList(d);
+      }
     }
   });
+}
+
+function createTabelMobile(d) {
+  const list = `
+  <table id="table-mob" >
+    <tr class="table-box__title">
+      <th>Task name</th>
+      <th>Developer</th>
+      <th>Work Type</th>
+      <th>Status</th>
+      <th data-type="number">Estimation (h)</th>
+      <th  data-type="number">Total time spent by All</th>
+      <th data-type="number">My Time spent by Period (h)</th>
+      <th data-type="text">Efficiency</th>
+    </tr>
+    <tr class="table-box__body">
+      <td>${d['Task name']}</td>
+      <td>${d['Developer']}</td>
+      <td>${d['Work Type']}</td>
+      <td class='${d['Status'].toLowerCase().slice(0, 3)}' id='status'>${
+    d['Status']
+  }
+      </td>
+      <td>${d['Estimation (h)']}</td>
+      <td>${d['Total time spent by All']}</td>
+      <td>${d['My Time spent by Period (h)']}</td>
+      <td>${d['Efficiency']}</td>
+    </tr>
+  </table>
+`;
+
+  refs.tableBody.insertAdjacentHTML('beforebegin', list);
 }
 
 function createList(d) {
@@ -58,8 +106,8 @@ function createList(d) {
                   <td>${d['My Time spent by Period (h)']}</td>
                   <td>${d['Efficiency']}</td>
               </tr>
+              
 `;
-
   refs.tableBody.insertAdjacentHTML('beforeend', list);
 }
 

@@ -137,11 +137,11 @@
                         </tr>
                         <tr>
                             <td class="information__text--purple">Label</td>
-                            <td>Hourly</td>
+                            <td class="information__text--bg">Hourly</td>
                         </tr>
                         <tr>
                             <td class="information__text--purple">Tag</td>
-                            <td>Page Mockup</td>
+                            <td class="information__text--bordered">Page Mockup</td>
                         </tr>
                         <tr>
                             <td class="information__text--purple">Status</td>
@@ -304,24 +304,30 @@
         </section>
         <section class="table">
             <div class="container">
-            <table class="table-box" id="table">
-                <thead>
+            <table width="100%" class="table-box" id="table">
+                <thead id="thead-pc">
                     <tr class="table-box__title">
                         <th>Task name</th>
                         <th>Developer</th>
                         <th>Work Type</th>
                         <th>Status</th>
                         <th data-type="number">Estimation (h) ⇵</th>
-                        <th data-type="number">Total time spent <br> by All ⇵</th>
-                        <th data-type="number">My Time spent by <br> Period (h) ⇵</th>
+                        <th width="15%" data-type="number">Total time spent <br> by All ⇵</th>
+                        <th width="15%" data-type="number">My Time spent by <br> Period (h) ⇵</th>
                         <th data-type="text">Efficiency ⇵</th>
                     </tr>
                 </thead>
                 <tbody data-table></tbody>
             </table>
-            <div class="table__row"></div>
+            <div class="table__row">
+            </div>
             <div class="table__row">
                 <p>Sum</p>
+                <div class="table__row--flex">
+                    <p>2078h</p>
+                    <p>1090h</p>
+                    <p>100% (1090h)</p>
+                </div>
             </div>
             </div>
         </section>
