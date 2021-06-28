@@ -658,7 +658,6 @@ p {
 
 .projects__card {
   padding: 34px 10px 34px 34px;
-  height: 600px;
 }
 
 .projects__card:first-child {
@@ -669,6 +668,7 @@ p {
 @media screen and (min-width: 980px) {
   .projects__card {
     padding: 40px 64px;
+    height: 600px;
   }
 }
 

@@ -102,7 +102,7 @@
 
 .projects__card {
   padding: 34px 10px 34px 34px;
-  height: 600px;
+  // height: 600px;
 
   &:first-child {
     margin-bottom: 24px;
@@ -110,6 +110,7 @@
   }
   @media screen and (min-width: 980px) {
     padding: 40px 64px;
+    height: 600px;
   }
 }
 

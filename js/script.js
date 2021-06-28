@@ -1,15 +1,6 @@
-const refs = {
-  tableContainer: document.querySelector('#table'),
-  tableHeadPc: document.querySelector('[id="thead-pc"]'),
-  tableBody: document.querySelector('[data-table]'),
-  btnBackPage: document.querySelector('[data-btn-back]'),
-  btnFirstPage: document.querySelector('[data-page-first]'),
-  btnLastPage: document.querySelector('[data-page-last]'),
-  btnToPage: document.querySelector('[data-btn-to]'),
-  nav: document.querySelector('.nav'),
-  iconMenu: document.querySelector('.menu__icon'),
-  navLink: document.querySelectorAll('.nav__link'),
-};
+import refs from './refs.js';
+
+console.log(refs);
 
 refs.btnBackPage.addEventListener('click', OnBackPage);
 refs.btnFirstPage.addEventListener('click', OnfirstPage);
@@ -54,7 +45,7 @@ async function renderList(min, max) {
       const d = data[i];
       if (window.innerWidth < 767) {
         createTabelMobile(d);
-      } else {
+      } else if (window.innerWidth >= 767) {
         createList(d);
       }
     }
